@@ -47,7 +47,7 @@ async def resolve_error(
         # --------------------------------------------------
         # CASE 1: Resolve existing log entry
         # --------------------------------------------------
-        if request.log_id is not None:
+        if request.log_id is not None and request.log_id > 0:
             logger.info(f"Resolving error for log_id={request.log_id}")
 
             log_entry = (
